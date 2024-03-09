@@ -34,8 +34,10 @@ function Home({Displayimages,navimg}) {
         let updatedName2=name2.toLocaleLowerCase().replace(/\s+/g, '');
 
 
-        if (updatedName1 && updatedName2==='' || updatedName1===''|| updatedName2===''){
-            setDisplayOutput(`Please Enter Valid Names.`) 
+        if ((updatedName1 && updatedName2==='') || (updatedName1==='')|| (updatedName2==='')){
+            setDisplayOutput(`Please Enter Valid Names.`)
+            setoutputImage(6);
+
         }
         else if (updatedName1===updatedName2){
         setDisplayOutput(`You entered the same name, sorry!`) 
@@ -69,8 +71,8 @@ function Home({Displayimages,navimg}) {
                     currentIndex = indexToRemove;
                 }
             }
-             let finalOutput=(Flames[0]);
-             switch (finalOutput){
+             let finalOutPut=(Flames[0]);
+             switch (finalOutPut){
                 
                 case 'Friends':
                     setoutputImage(0);
@@ -89,48 +91,54 @@ function Home({Displayimages,navimg}) {
                     break;
                 case 'Sibling':
                     setoutputImage(5);
-                    break;     
+                    break; 
+                default:
+                    setoutputImage(6);
+                    break; 
+
              }
-            setDisplayOutput(`The relationship between ${name1}  and  ${name2}  will end in ${finalOutput} `)
+            setDisplayOutput(`The relationship between ${name1}  and  ${name2}  will end in ${finalOutPut} `)
 
         }
 
     };
 
     return (
-        <div className="flex font-bold text-white bg-gradient-to-b from-gray-900 via-slate-500 to-zinc-100 flex-col h-screen w-screen bg-contain bg-center bg-no-repeat md:flex-row "  >
-           <div>
-           <ExternalLink className='h-[10vh] w-[10vh]' href='https://akilraj-1153.github.io/Akilraj-N-Portfolio/'><img  src={navimg} alt='logo' className='h-[10vh] w-[10vh' ></img></ExternalLink> 
-
-           </div>
-            <div className=' h-3/4 w-screen flex flex-col justify-center items-center gap-10 md:w-1/4 md:h-screen'>
-                <div>
-                <h1 className='text-5xl md:text-4xl mt-5 '>Flames Game</h1>
-
+        <div className="flex font-bold text-white bg-gradient-to-b from-gray-900 via-slate-500 to-zinc-100 flex-col h-screen w-screen  md:flex-col "  >
+            <div className=' float-left flex flex-row h-[10%] w-screen items-center '>
+            <ExternalLink  href='https://akilraj-1153.github.io/Akilraj;-N-Portfolio/'><img  src={navimg} alt='logo' className='h-[10vh] w-[10vh]' ></img></ExternalLink> 
+            <h1 className='text-5xl inline md:hidden md:text-3xl ml-2  w-fit '>Flames Game</h1>
+            </div>
+            <div className='flex flex-col md:flex-row h-[90%]  w-screen'>
+                <div className=' h-fit p-10 w-screen flex flex-col justify-center items-center gap-10 md:w-1/4 md:h-full'>
+                   <div>
+                     <h1 className='text-5xl hidden md:text-4xl mt-5 md:inline'>Flames Game</h1>
                 </div>
-                <div className='w-3/4 '>
-                    <form className='flex flex-col gap-4 w-full '>
-                        <div className='flex flex-col gap-1 w-full '>
-                            <label className='h-10 w-full' htmlFor="name1">Enter Your Name</label>
-                            <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4'  id="name1" type="text" placeholder='Your Name' value={name1} onChange={handleName1Change}></input>
-                        </div>
-                        <div className='flex flex-col gap-1'>
-                            <label className='h-10 w-full' htmlFor="name2">Enter Your Crush Name</label>
-                            <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4 '  id="name2" type="text" placeholder='Your Crush Name' value={name2} onChange={handleName2Change}></input>
-                        </div>
-                        <div className='flex  gap-2  rounded-md  justify-center items-center flex-row'>
-                            
-                            <button className='h-10 w-2/4 bg-pink-500 rounded-lg' type="submit" onClick={handleButtonClick}>Submit</button>
-                            <button className='h-10 w-2/4 bg-pink-500 rounded-lg' onClick={handereset} >Try Again</button>
-                            
-                        </div>
-                    </form>
+                    <div className='w-3/4 '>
+                        <form className='flex flex-col gap-4 w-full '>
+                            <div className='flex flex-col gap-1 w-full '>
+                                <label className='h-10 w-full' htmlFor="name1">Enter Your Name</label>
+                                <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4'  id="name1" type="text" placeholder='Your Name' value={name1} onChange={handleName1Change}></input>
+                            </div>
+                            <div className='flex flex-col gap-1'>
+                                <label className='h-10 w-full' htmlFor="name2">Enter Your Crush Name</label>
+                                <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4 '  id="name2" type="text" placeholder='Your Crush Name' value={name2} onChange={handleName2Change}></input>
+                            </div>
+                            <div className='flex  gap-2  rounded-md  justify-center items-center flex-row '>
+                                
+                                <button className='h-10 w-2/4 bg-pink-500 rounded-lg' type="submit" onClick={handleButtonClick}>Submit</button>
+                                <button className='h-10 w-2/4 bg-pink-500 rounded-lg' onClick={handereset} >Try Again</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div className=' gap-5 h-2/4 w-screen text-3xl justify-center items-center flex md:w-3/4 md:h-full flex-col'>
+                    <div className='text-center'>{displayOutput}</div>
+                    <img className='rounded-xl h-3/4 w-auto'alt="feelings" src={Displayimages[outputImage]}></img>
                 </div>
             </div>
-            <div className=' gap-5 h-2/4 w-screen text-3xl justify-center items-center flex md:w-3/4 md:h-screen flex-col'>
-                <div className='text-center'>{displayOutput}</div>
-                <img className='rounded-xl h-3/4 w-auto' src={Displayimages[outputImage]}></img>
-            </div>
+            
         </div>
     );
 }
