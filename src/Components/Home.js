@@ -41,6 +41,8 @@ function Home({Displayimages,navimg}) {
         }
         else if (updatedName1===updatedName2){
         setDisplayOutput(`You entered the same name, sorry!`) 
+        setoutputImage(6)
+
         }
         else{
 
