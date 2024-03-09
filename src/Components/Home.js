@@ -135,7 +135,7 @@ function Home({Displayimages,navimg}) {
                 </div>
                 <div className=' gap-5 h-2/4 w-screen text-3xl justify-center items-center flex md:w-3/4 md:h-full flex-col'>
                     <div className='text-center'>{displayOutput}</div>
-                    <img className='rounded-xl h-3/4 w-auto'alt="feelings" src={Displayimages[outputImage]}></img>
+                    <img className='rounded-xl h-[90%] w-[90%] md:h-[85%] sm:w-auto'alt="feelings" src={Displayimages[outputImage]}></img>
                 </div>
             </div>
             
