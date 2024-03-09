@@ -123,7 +123,7 @@ function Home({Displayimages,navimg}) {
                                 <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4'  id="name1" type="text" placeholder='Your Name' value={name1} onChange={handleName1Change}></input>
                             </div>
                             <div className='flex flex-col gap-1'>
-                                <label className='h-10 w-full' htmlFor="name2">Enter Your Crush Name</label>
+                                <label className='h-10 w-full' htmlFor="name2">Enter Another Name</label>
                                 <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4 '  id="name2" type="text" placeholder='Your Crush Name' value={name2} onChange={handleName2Change}></input>
                             </div>
                             <div className='flex  gap-2  rounded-md  justify-center items-center flex-row '>
