@@ -107,15 +107,15 @@ function Home({Displayimages,navimg}) {
         <div className="flex font-bold text-white bg-gradient-to-b from-gray-900 via-slate-500 to-zinc-100 flex-col h-screen w-screen  md:flex-col "  >
             <div className=' float-left flex flex-row h-[10%] w-screen items-center '>
             <ExternalLink  href='https://akilraj-1153.github.io/Akilraj;-N-Portfolio/'><img  src={navimg} alt='logo' className='h-[10vh] w-[10vh]' ></img></ExternalLink> 
-            <h1 className='text-5xl inline md:hidden md:text-3xl ml-2  w-fit '>Flames Game</h1>
+            <h1 className='text-4xl inline md:hidden md:text-3xl ml-2  w-fit '>Flames Game</h1>
             </div>
-            <div className='flex flex-col md:flex-row h-[90%]  w-screen'>
-                <div className=' h-fit p-10 w-screen flex flex-col justify-center items-center gap-10 md:w-1/4 md:h-full'>
-                   <div>
-                     <h1 className='text-5xl hidden md:text-4xl mt-5 md:inline'>Flames Game</h1>
-                </div>
+            <div className='flex flex-col md:flex-row h-[100%] sm:h-[90%]  w-screen'>
+                <div className=' h-fit p-8 w-screen flex flex-col md:justify-center items-center gap-10 md:w-1/4 md:h-full'>
+                   <div className='text-5xl hidden md:text-4xl mt-5 md:inline'>
+                        <h1 className='text-5xl hidden md:text-4xl mt-5 md:inline'>Flames Game</h1>
+                    </div>
                     <div className='w-3/4 '>
-                        <form className='flex flex-col gap-4 w-full '>
+                        <form className='flex flex-col gap-4 w-full'>
                             <div className='flex flex-col gap-1 w-full '>
                                 <label className='h-10 w-full' htmlFor="name1">Enter Your Name</label>
                                 <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4'  id="name1" type="text" placeholder='Your Name' value={name1} onChange={handleName1Change}></input>
@@ -125,18 +125,18 @@ function Home({Displayimages,navimg}) {
                                 <input className='h-12 text-black bg-slate-50 rounded-lg w-full p-4 '  id="name2" type="text" placeholder='Your Crush Name' value={name2} onChange={handleName2Change}></input>
                             </div>
                             <div className='flex  gap-2  rounded-md  justify-center items-center flex-row '>
-                                
-                                <button className='h-10 w-2/4 bg-pink-500 rounded-lg' type="submit" onClick={handleButtonClick}>Submit</button>
-                                <button className='h-10 w-2/4 bg-pink-500 rounded-lg' onClick={handereset} >Try Again</button>
+                                <button className='h-10 w-2/4 overflow-hidden bg-pink-500 rounded-lg' type="submit" onClick={handleButtonClick}>Submit</button>
+                                <button className='h-10 w-2/4 overflow-hidden bg-pink-500 rounded-lg' onClick={handereset} >Try Again</button>
                                 
                             </div>
                         </form>
                     </div>
                 </div>
-                <div className=' gap-5 h-2/4 w-screen text-3xl justify-center items-center flex md:w-3/4 md:h-full flex-col'>
-                    <div className='text-center'>{displayOutput}</div>
-                    <img className='rounded-xl h-[90%] w-[90%] md:h-[85%] sm:w-auto'alt="feelings" src={Displayimages[outputImage]}></img>
+                <div className='gap-2 h-2/4 w-screen text-2xl md:text-3xl justify-start items-center flex md:w-3/4 md:h-full flex-col'>
+                    <div className=' p-0 text-center h-[30%] md:h-[10%] align-center items-center flex'>{displayOutput}</div>
+                    <img className='rounded-xl h-[90%] w-[90%] md:h-[80%] sm:w-auto' alt="feelings" src={Displayimages[outputImage]}></img>
                 </div>
+
             </div>
             
         </div>
