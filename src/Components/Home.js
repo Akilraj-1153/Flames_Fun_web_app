@@ -108,7 +108,7 @@ function Home({Displayimages,navimg}) {
     return (
         <div className="flex font-bold text-white bg-gradient-to-b from-gray-900 via-slate-500 to-zinc-100 flex-col h-screen w-screen  md:flex-col "  >
             <div className=' float-left flex flex-row h-[10%] w-screen items-center '>
-            <ExternalLink  href='https://akilraj-1153.github.io/Akilraj;-N-Portfolio/'><img  src={navimg} alt='logo' className='h-[10vh] w-[10vh]' ></img></ExternalLink> 
+            <ExternalLink  href='https://akilraj-1153.github.io/Akilraj-N-Portfolio/'><img  src={navimg} alt='logo' className='h-[10vh] w-[10vh]' ></img></ExternalLink> 
             <h1 className='text-4xl inline md:hidden md:text-3xl ml-2  w-fit '>Flames Game</h1>
             </div>
             <div className='flex flex-col md:flex-row h-[100%] sm:h-[90%]  w-screen'>
