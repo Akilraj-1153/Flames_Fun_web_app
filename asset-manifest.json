@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Flames_Fun_web_app/static/css/main.f855e6bc.css",
+    "main.js": "/Flames_Fun_web_app/static/js/main.46d4b69b.js",
+    "static/js/453.00c728cf.chunk.js": "/Flames_Fun_web_app/static/js/453.00c728cf.chunk.js",
+    "static/media/Love.png": "/Flames_Fun_web_app/static/media/Love.7ab8da95f4397818e9fc.png",
+    "static/media/Marriage.png": "/Flames_Fun_web_app/static/media/Marriage.04a7729a9b6b448ae14e.png",
+    "static/media/Friend.png": "/Flames_Fun_web_app/static/media/Friend.cbbd746b089acc4818c9.png",
+    "static/media/sibling.png": "/Flames_Fun_web_app/static/media/sibling.cf0acf9e033282f24397.png",
+    "static/media/Affection.png": "/Flames_Fun_web_app/static/media/Affection.e1993b291f3f47155eab.png",
+    "static/media/enemy.png": "/Flames_Fun_web_app/static/media/enemy.50af8a4500d41324bda9.png",
+    "static/media/FRIENDS.png": "/Flames_Fun_web_app/static/media/FRIENDS.d04d733656e0b8f9750d.png",
+    "static/media/Navimg.png": "/Flames_Fun_web_app/static/media/Navimg.11bc86f49e734a4b9563.png",
+    "index.html": "/Flames_Fun_web_app/index.html",
+    "main.f855e6bc.css.map": "/Flames_Fun_web_app/static/css/main.f855e6bc.css.map",
+    "main.46d4b69b.js.map": "/Flames_Fun_web_app/static/js/main.46d4b69b.js.map",
+    "453.00c728cf.chunk.js.map": "/Flames_Fun_web_app/static/js/453.00c728cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.46d4b69b.js"
+  ]
+}
